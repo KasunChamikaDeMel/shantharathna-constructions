@@ -6,36 +6,47 @@ const Home = () => {
     window.scrollTo(0, 0);
   }, []);
   return <>
-<section className="relative h-screen flex items-center justify-center">
+<section className="relative h-screen pt-32 flex items-center justify-center">
   <div className="absolute inset-0 z-0 bg-gray-300"></div>
 
-  <div className="container mx-auto px-4 z-10 h-full flex flex-col md:flex-row items-center">
-    {/* block */}
-    <div className="w-full md:w-1/2 flex items-center justify-center mb-8 md:mb-0">
-      <div className="bg-white rounded-full p-8 shadow-lg w-64 h-64 md:w-96 md:h-96 flex items-center justify-center">
-        <img src="/icons/logo.png" alt="Logo" className="w-48 h-48 md:w-96 md:h-96 object-contain" />
-      </div>
-    </div>
-
-    {/* Text and buttons */}
-    <div className="w-full md:w-1/2 text-center md:text-left">
-      <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-black mb-6">
-        Building the Future, <br />
-        <span className="text-amber-500">Restoring the Past</span>
-      </h1>
-      <p className="text-xl md:text-2xl text-black mb-8 max-w-lg mx-auto md:mx-0">
-        Delivering trusted residential and commercial construction solutions across Sri Lanka since 2003.
-      </p>
-      <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-        <Link to="/quote" className="bg-amber-600 hover:bg-amber-700 text-white px-8 py-3 rounded-md text-lg font-medium transition-colors">
-          Get a Free Quotation
-        </Link>
-        <Link to="/projects" className="bg-white hover:bg-gray-100 text-gray-900 px-8 py-3 rounded-md text-lg font-medium transition-colors">
-          View Our Projects
-        </Link>
-      </div>
+<div className="container mx-auto px-4 z-10 h-full flex flex-col md:flex-row items-center">
+  {/* Logo Block */}
+  <div className="w-full md:w-1/2 flex items-center justify-center mb-6 md:mb-0">
+    <div className="bg-white rounded-full p-6 shadow-lg w-48 h-48 sm:w-56 sm:h-56 md:w-72 md:h-72 flex items-center justify-center">
+      <img
+        src="/icons/logo.png"
+        alt="Logo"
+        className="w-32 h-32 sm:w-40 sm:h-40 md:w-64 md:h-64 object-contain"
+      />
     </div>
   </div>
+
+  {/* Text and Buttons */}
+  <div className="w-full md:w-1/2 text-center md:text-left">
+    <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-black mb-4">
+      Building the Future, <br />
+      <span className="text-amber-500">Restoring the Past</span>
+    </h1>
+    <p className="text-base sm:text-lg md:text-xl text-black mb-6 max-w-md mx-auto md:mx-0">
+      Delivering trusted residential and commercial construction solutions across Sri Lanka since 2003.
+    </p>
+    <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+      <Link
+        to="/quote"
+        className="bg-amber-600 hover:bg-amber-700 text-white px-6 py-3 rounded-md text-base sm:text-lg font-medium transition-colors"
+      >
+        Get a Free Quotation
+      </Link>
+      <Link
+        to="/projects"
+        className="bg-white hover:bg-gray-100 text-gray-900 px-6 py-3 rounded-md text-base sm:text-lg font-medium transition-colors"
+      >
+        View Our Projects
+      </Link>
+    </div>
+  </div>
+</div>
+
 </section>
 
 
