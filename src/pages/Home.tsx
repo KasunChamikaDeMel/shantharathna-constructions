@@ -6,29 +6,43 @@ const Home = () => {
     window.scrollTo(0, 0);
   }, []);
   return <>
-      {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-center bg-black">
-        <div className="absolute inset-0 z-0 bg-gray-100">
-        </div>
-        <div className="container mx-auto px-4 z-10 text-center">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-black mb-6">
-            Building the Future, <br />
-            <span className="text-amber-500">Restoring the Past</span>
-          </h1>
-          <p className="text-xl md:text-2xl text-black mb-8 max-w-3xl mx-auto">
-            Quality construction services for residential and commercial
-            projects since 2003.
-          </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Link to="/quote" className="bg-amber-600 hover:bg-amber-700 text-white px-8 py-3 rounded-md text-lg font-medium transition-colors">
-              Get a Free Quote
-            </Link>
-            <Link to="/projects" className="bg-white hover:bg-gray-100 text-gray-900 px-8 py-3 rounded-md text-lg font-medium transition-colors">
-              View Our Projects
-            </Link>
-          </div>
-        </div>
-      </section>
+<section className="relative h-screen flex items-center justify-center bg-black">
+  <div className="absolute inset-0 z-0 bg-gray-100"></div>
+
+  <div className="container mx-auto px-4 z-10 h-full flex items-center">
+    {/* block */}
+    <div className="w-1/2 flex items-center justify-center">
+      <div className="bg-white rounded-full p-8 shadow-lg w-96 h-96 flex items-center justify-center">
+        <img src="/icons/logo.png" alt="Logo" className="w-96 h-96 object-contain" />
+      </div>
+    </div>
+
+    {/* Text and buttons */}
+    <div className="w-1/2 text-left">
+      <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-black mb-6">
+        Building the Future, <br />
+        <span className="text-amber-500">Restoring the Past</span>
+      </h1>
+      <p className="text-xl md:text-2xl text-black mb-8 max-w-lg">
+        Quality construction services for residential and commercial
+        projects since 2003.
+      </p>
+      <div className="flex flex-col sm:flex-row gap-4">
+        <Link to="/quote" className="bg-amber-600 hover:bg-amber-700 text-white px-8 py-3 rounded-md text-lg font-medium transition-colors">
+          Get a Free Quotation
+        </Link>
+        <Link to="/projects" className="bg-white hover:bg-gray-100 text-gray-900 px-8 py-3 rounded-md text-lg font-medium transition-colors">
+          View Our Projects
+        </Link>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
       {/* About Brief Section */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
@@ -93,6 +107,9 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+
+
       {/* Services Section */}
       <section className="py-16 bg-gray-100">
         <div className="container mx-auto px-4">
@@ -210,6 +227,9 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+
+
       {/* Featured Projects */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
