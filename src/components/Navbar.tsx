@@ -24,9 +24,15 @@ const Navbar = () => {
   return (
     <header className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'shadow-md py-2 bg-white' : 'bg-transparent py-4'}`}>
       <div className="container mx-auto px-4 flex justify-between items-center">
-        
+
         {/* Logo */}
-        <Link to="/" className="flex items-center text-2xl font-bold text-amber-600">
+        <Link
+          to="/"
+          onClick={() => {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }}
+          className="flex items-center text-2xl font-bold text-amber-600"
+        >
           SHANTHARATHNA CONSTRUCTIONS
         </Link>
 
@@ -36,14 +42,19 @@ const Navbar = () => {
             <Link
               key={item.name}
               to={item.path}
+              onClick={() => {
+                if (item.path === '/') {
+                  window.scrollTo({ top: 0, behavior: 'smooth' });
+                }
+              }}
               className={`text-sm font-medium transition-colors hover:text-amber-600 ${location.pathname === item.path ? 'text-amber-600' : 'text-gray-700'}`}
             >
               {item.name}
             </Link>
           ))}
-          <a href="tel:+94703274701" className="flex items-center text-gray-700 hover:text-amber-600 text-sm">
+          <a href="tel:+94775451850" className="flex items-center text-gray-700 hover:text-amber-600 text-sm">
             <PhoneIcon className="h-5 w-5 mr-2" />
-            +94 (70) 327 4701
+            +94 (77) 545 1850
           </a>
         </div>
 
@@ -60,15 +71,20 @@ const Navbar = () => {
             <Link
               key={item.name}
               to={item.path}
-              onClick={() => setIsMenuOpen(false)}
+              onClick={() => {
+                setIsMenuOpen(false);
+                if (item.path === '/') {
+                  window.scrollTo({ top: 0, behavior: 'smooth' });
+                }
+              }}
               className={`block text-base font-medium rounded-md px-3 py-2 ${location.pathname === item.path ? 'bg-amber-50 text-amber-600' : 'text-gray-700 hover:bg-gray-100'}`}
             >
               {item.name}
             </Link>
           ))}
-          <a href="tel:+94703274701" className="flex items-center text-gray-700 px-3 py-2">
+          <a href="tel:+94775451850" className="flex items-center text-gray-700 px-3 py-2">
             <PhoneIcon className="h-5 w-5 mr-2" />
-            +94 (70) 327 4701
+            +94 (77) 545 1850
           </a>
         </div>
       )}
